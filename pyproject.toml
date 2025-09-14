@@ -1,0 +1,21 @@
+[project]
+name = "mcp-tools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bs4>=0.0.2",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.13.0",
+    "pydantic>=2.11.7",
+    "pytest>=8.4.2",
+    "pytube>=15.0.0",
+    "rss-parser>=2.1.1",
+    "youtube-transcript-api>=1.2.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.12.9",
+]
