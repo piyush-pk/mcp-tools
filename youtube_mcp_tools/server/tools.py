@@ -1,7 +1,6 @@
-from core import YoutubeTool
+from ..core import YoutubeTool
 from mcp.server.fastmcp import FastMCP
 from pydantic import HttpUrl, Field
-from typing import Literal
 import os
 
 host = os.getenv("MCP_HOST", "0.0.0.0")  # default 0.0.0.0
@@ -32,7 +31,3 @@ def get_transcript(url: HttpUrl = Field(None, description="Url of Youtube Video"
             }}
     """
     return YoutubeTool(url=url).fetch_transcript().build_response()
-
-
-def run_server(transport: Literal["stdio", "sse", "streamable-http"] = "stdio") -> None:
-    mcp.run(transport=transport)

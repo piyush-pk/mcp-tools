@@ -1,7 +1,7 @@
 from pydantic import PrivateAttr
 from youtube_transcript_api import YouTubeTranscriptApi
 
-from core import YoutubeResponse
+from ...core import YoutubeResponse
 
 
 class YoutubeTool(YoutubeResponse):

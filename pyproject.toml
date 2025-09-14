@@ -19,3 +19,6 @@ dependencies = [
 dev-dependencies = [
     "ruff>=0.12.9",
 ]
+
+[project.scripts]
+mcp-tools = "youtube_mcp_tools.main:run"

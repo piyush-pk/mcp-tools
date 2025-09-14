@@ -1,5 +1,5 @@
 from pydantic import HttpUrl
-from server import get_transcript
+from youtube_mcp_tools import get_transcript
 
 
 def test_get_transcript_valid(monkeypatch):
