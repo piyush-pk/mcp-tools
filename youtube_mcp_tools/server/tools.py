@@ -1,4 +1,4 @@
-from ..core import YoutubeTool
+from ..core import YoutubeTool, YoutubeResponse
 from mcp.server.fastmcp import FastMCP
 from pydantic import HttpUrl, Field
 import os
@@ -13,8 +13,9 @@ mcp = FastMCP("PK TOOLS", host=host, port=port)
     name="get_transcript",
     title="Get Youtube Transcript",
     description="Fetch Youtube Video Transcript",
+    structured_output=True
 )
-def get_transcript(url: HttpUrl = Field(None, description="Url of Youtube Video")):
+def get_transcript(url: HttpUrl = Field(None, description="Url of Youtube Video",)) -> YoutubeResponse:
     """
     Fetch or Get Youtube video transcript.
     args:

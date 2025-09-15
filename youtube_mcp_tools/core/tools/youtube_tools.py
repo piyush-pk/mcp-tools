@@ -55,4 +55,4 @@ class YoutubeTool(YoutubeResponse):
             error=self.error,
             message=self.message,
             transcript=self.transcript,
-        ).model_dump_json()
+        )
